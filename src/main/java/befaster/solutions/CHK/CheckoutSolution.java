@@ -26,10 +26,11 @@ public class CheckoutSolution {
         totalCheckout += numberOfItems[2] * 20;
         //Adding the value of items D
         totalCheckout += numberOfItems[3] * 15;
-        
+
         return totalCheckout;
     }
 }
+
 
 
 
