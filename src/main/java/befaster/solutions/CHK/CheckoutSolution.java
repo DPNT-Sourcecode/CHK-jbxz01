@@ -39,11 +39,12 @@ public class CheckoutSolution {
         totalCheckout += numberOfItems[4] * 40;
 
         //Adding the value of items F
-        totalCheckout += (numberOfItems[5] / 3) * 80; //80 = 2 * F, so we charge 3 items for the price of 2
-        totalCheckout += (numberOfItems[5] % 3) * 40;
+        totalCheckout += (numberOfItems[5] / 3) * 20; //80 = 2 * F, so we charge 3 items for the price of 2
+        totalCheckout += (numberOfItems[5] % 3) * 10;
 
         return totalCheckout;
     }
 }
+
 
 
