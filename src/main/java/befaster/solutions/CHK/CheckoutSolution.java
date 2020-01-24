@@ -20,10 +20,22 @@ public class CheckoutSolution {
             numberOfItems[character - 65]++;
         }
 
-        //Process the new offer, for 2 of E you get 1 B free
+        //First the offers that impact multiple products
+        //E offer
         numberOfItems[1] = numberOfItems[1] - numberOfItems[4] / 2;
         if (numberOfItems[1] < 0 )
             numberOfItems[1] = 0;
+
+        //N offer
+        numberOfItems[12] = numberOfItems[12] - numberOfItems[13] / 3;
+        if (numberOfItems[12] < 0 )
+            numberOfItems[12] = 0;
+
+        //R Offer
+
+
+        //Process the new offer, for 2 of E you get 1 B free
+
 
         int totalCheckout = 0;
         //Adding the value of items A
@@ -50,3 +62,4 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
+
