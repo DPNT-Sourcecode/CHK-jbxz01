@@ -55,6 +55,23 @@ public class CheckoutSolution {
         int groupTotal = numberOfItems['X' - 65] + numberOfItems['Y' - 65] + numberOfItems['Z' - 65];
         totalCheckout += (groupTotal / 3) * 45; //First we take care of the offers.
         int notInOfferItems = groupTotal % 3;
+        for (int i = 0; i < notInOfferItems; i++)
+        {
+            if (numberOfItems['X' - 65] > 0 )
+            {
+                totalCheckout+= 17;
+                numberOfItems['X' - 65]--;
+            }
+            else if (numberOfItems['Y' - 65] > 0 )
+            {
+                totalCheckout+= 20;
+                numberOfItems['Y' - 65]--;
+            }
+            else
+            {
+                totalCheckout+= 21;
+            }
+        }
 
         //For X Y and Z we have a separate logic
         for (int i = 0; i < 23; i++)
@@ -107,6 +124,7 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
+
 
 
 
