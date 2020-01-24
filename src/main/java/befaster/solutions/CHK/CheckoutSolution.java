@@ -44,10 +44,38 @@ public class CheckoutSolution {
 
 
         int totalCheckout = 0;
+        int remainingAItems;
 
         for (int i = 0; i < 26; i++)
         {
-            
+            Character c = i + 65;
+            switch (c)
+            {
+                case 'A':
+                    totalCheckout += (numberOfItems[i] / 5) * 200;
+                    remainingAItems = numberOfItems[i] % 5;
+                    //Than the 3 items offer
+                    totalCheckout += (remainingAItems / 3 ) * 130;
+                    totalCheckout += (remainingAItems % 3 ) * 50;
+                    break
+                case 'B':
+                    totalCheckout += (numberOfItems[i] / 2) * 45;
+                    totalCheckout += (numberOfItems[i] % 2) * 30;
+                    break
+                case 'H':
+                    totalCheckout += (numberOfItems[i] / 10) * 80;
+                    remainingAItems = numberOfItems[i] % 10;
+                    //Than the 3 items offer
+                    totalCheckout += (remainingAItems / 3 ) * 130;
+                    totalCheckout += (remainingAItems % 3 ) * 50;
+                    break
+                case 'A':
+                    break
+                case 'A':
+                    break
+                default:
+                    totalCheckout += numberOfItems[i] * PRICES[i];
+            }
         }
 
 
@@ -75,5 +103,6 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
+
 
 
