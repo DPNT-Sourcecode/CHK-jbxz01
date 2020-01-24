@@ -94,11 +94,3 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
-
-
-
-
-
-
-
-
