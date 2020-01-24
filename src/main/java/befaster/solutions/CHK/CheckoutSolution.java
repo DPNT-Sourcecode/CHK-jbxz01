@@ -16,11 +16,20 @@ public class CheckoutSolution {
         }
 
         int totalCheckout = 0;
-
-        System.out.println(skus);
-
-        return -1;
+        //Adding the value of items A
+        totalCheckout += (numberOfItems[0] / 3) * 130;
+        totalCheckout += (numberOfItems[0] % 3) * 50;
+        //Adding the value of items B
+        totalCheckout += (numberOfItems[1] / 2) * 45;
+        totalCheckout += (numberOfItems[1] % 2) * 30;
+        //Adding the value of items C
+        totalCheckout += numberOfItems[2] * 20;
+        //Adding the value of items D
+        totalCheckout += numberOfItems[3] * 15;
+        
+        return totalCheckout;
     }
 }
+
 
 
