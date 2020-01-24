@@ -5,12 +5,12 @@ import befaster.runner.SolutionNotImplementedException;
 public class CheckoutSolution {
     public Integer checkout(String skus) {
 
-        int[] numberOfItems = new int[4];
+        int[] numberOfItems = new int[5];
 
         for (int i = 0; i < skus.length(); i++)
         {
             Character character = skus.charAt(i);
-            if (character < 65 || character > 68 )
+            if (character < 65 || character > 69 )
                 return -1;
             numberOfItems[character - 65]++;
         }
@@ -30,6 +30,7 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
+
 
 
 
