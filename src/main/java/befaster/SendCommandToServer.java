@@ -39,7 +39,7 @@ public class SendCommandToServer {
      *   |      |   ./src/main/java/befaster/solutions                                  |
      *   |  5.  | Replace the following placeholder exception with your solution:       |
      *   |      |   throw new SolutionNotImplementedException()                         |
-     *   |  6.  | Deploy to production by typing "deploy".                              |
+     *   |  6.  | Deploy to production by typing "deploy".                             |
      *   |  7.  | Observe the output, check for failed requests.                        |
      *   |  8.  | If passed, go to step 1.                                              |
      *   +------+-----------------------------------------------------------------------+
@@ -72,3 +72,4 @@ public class SendCommandToServer {
     }
 
 }
+
