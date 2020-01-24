@@ -40,6 +40,12 @@ public class CheckoutSolution {
         //U offer
         numberOfItems['U' - 65] = numberOfItems['U' - 65] - numberOfItems['U' - 65] / 4;
 
+        //They have all the same price so we could combine them
+        numberOfItems['Y' - 65] += numberOfItems['S' - 65] + numberOfItems['T' - 65];
+        numberOfItems['S' - 65] = 0;
+        numberOfItems['T' - 65] = 0;
+
+
 
         int totalCheckout = 0;
         int remainingAItems;
@@ -94,4 +100,5 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
+
 
