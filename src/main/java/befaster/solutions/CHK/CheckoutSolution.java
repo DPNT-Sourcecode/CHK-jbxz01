@@ -26,12 +26,18 @@ public class CheckoutSolution {
         if (numberOfItems[1] < 0 )
             numberOfItems[1] = 0;
 
+        //F offer
+        numberOfItems[5] = numberOfItems[5] - numberOfItems[5] / 2;
+
         //N offer
         numberOfItems[12] = numberOfItems[12] - numberOfItems[13] / 3;
         if (numberOfItems[12] < 0 )
             numberOfItems[12] = 0;
 
         //R Offer
+        numberOfItems[12] = numberOfItems[12] - numberOfItems[13] / 3;
+        if (numberOfItems[12] < 0 )
+            numberOfItems[12] = 0;
 
 
         //Process the new offer, for 2 of E you get 1 B free
@@ -62,3 +68,4 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
+
