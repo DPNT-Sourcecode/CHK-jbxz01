@@ -22,28 +22,35 @@ public class CheckoutSolution {
 
         //First the offers that impact multiple products
         //E offer
-        numberOfItems[1] = numberOfItems[1] - numberOfItems[4] / 2;
-        if (numberOfItems[1] < 0 )
-            numberOfItems[1] = 0;
+        numberOfItems['B' - 65] = numberOfItems['B' - 65] - numberOfItems['E' - 65] / 2;
+        if (numberOfItems['B' - 65] < 0 )
+            numberOfItems['B' - 65] = 0;
 
         //F offer
-        numberOfItems[5] = numberOfItems[5] - numberOfItems[5] / 2;
+        numberOfItems['F' - 65] = numberOfItems['F' - 65] - numberOfItems['F' - 65] / 2;
 
         //N offer
-        numberOfItems[12] = numberOfItems[12] - numberOfItems[13] / 3;
-        if (numberOfItems[12] < 0 )
-            numberOfItems[12] = 0;
+        numberOfItems['M' - 65] = numberOfItems['M' - 65] - numberOfItems['R' - 65] / 3;
+        if (numberOfItems['M' - 65] < 0 )
+            numberOfItems['M' - 65] = 0;
 
         //R Offer
-        numberOfItems[12] = numberOfItems[12] - numberOfItems[13] / 3;
-        if (numberOfItems[12] < 0 )
-            numberOfItems[12] = 0;
+        numberOfItems['Q' - 65] = numberOfItems['Q' - 65] - numberOfItems['R' - 65] / 3;
+        if (numberOfItems['Q' - 65] < 0 )
+            numberOfItems['Q' - 65] = 0;
 
-
-        //Process the new offer, for 2 of E you get 1 B free
+        //U offer
+        numberOfItems['U' - 65] = numberOfItems['U' - 65] - numberOfItems['U' - 65] / 3;
 
 
         int totalCheckout = 0;
+
+        for (int i = 0; i < 26; i++)
+        {
+            
+        }
+
+
         //Adding the value of items A
         //First get the 5 items offer
         totalCheckout += (numberOfItems[0] / 5) * 200;
@@ -68,4 +75,5 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
+
 
