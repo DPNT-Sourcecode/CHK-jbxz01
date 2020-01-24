@@ -48,42 +48,42 @@ public class CheckoutSolution {
 
         for (int i = 0; i < 26; i++)
         {
-            Character c = i + 65;
+            char c = i + 65;
             switch (c)
             {
                 case 'A':
                     totalCheckout += (numberOfItems[i] / 5) * 200;
                     remainingAItems = numberOfItems[i] % 5;
-                    //Than the 3 items offer
+
                     totalCheckout += (remainingAItems / 3 ) * 130;
                     totalCheckout += (remainingAItems % 3 ) * 50;
-                    break
+                    break;
                 case 'B':
                     totalCheckout += (numberOfItems[i] / 2) * 45;
                     totalCheckout += (numberOfItems[i] % 2) * 30;
-                    break
+                    break;
                 case 'H':
                     totalCheckout += (numberOfItems[i] / 10) * 80;
                     remainingAItems = numberOfItems[i] % 10;
-                    //Than the 3 items offer
+
                     totalCheckout += (remainingAItems / 5 ) * 45;
                     totalCheckout += (remainingAItems % 5 ) * 10;
-                    break
+                    break;
                 case 'P':
                     totalCheckout += (numberOfItems[i] / 5) * 200;
                     totalCheckout += (numberOfItems[i] % 5) * 50;
-                    break
+                    break;
                 case 'Q':
                     totalCheckout += (numberOfItems[i] / 3) * 80;
                     totalCheckout += (numberOfItems[i] % 3) * 30;
-                    break
+                    break;
                 case 'V':
                     totalCheckout += (numberOfItems[i] / 3) * 130;
                     remainingAItems = numberOfItems[i] % 3;
-                    //Than the 3 items offer
+
                     totalCheckout += (remainingAItems / 2 ) * 90;
                     totalCheckout += (remainingAItems % 2 ) * 50;
-                    break
+                    break;
                 default:
                     totalCheckout += numberOfItems[i] * PRICES[i];
             }
@@ -92,6 +92,7 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
+
 
 
 
