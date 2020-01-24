@@ -4,7 +4,7 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
 
-    static int[] PRICES = {50,30,20,15,40,10,20,10,35,60,80,90,15,40,10,50,30,50,30,20,40,50,20,90,10,50};
+    static int[] PRICES = {50,30,20,15,40,10,20,10,35,60,70,90,15,40,10,50,30,50,20,20,40,50,20,17,20,21};
 
     public Integer checkout(String skus) {
 
@@ -68,8 +68,8 @@ public class CheckoutSolution {
                     totalCheckout += (remainingAItems % 5 ) * 10;
                     break;
                 case 'K':
-                    totalCheckout += (numberOfItems[i] / 2) * 150;
-                    totalCheckout += (numberOfItems[i] % 2) * 80;
+                    totalCheckout += (numberOfItems[i] / 2) * 120;
+                    totalCheckout += (numberOfItems[i] % 2) * 70;
                     break;
                 case 'P':
                     totalCheckout += (numberOfItems[i] / 5) * 200;
@@ -94,3 +94,4 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
+
