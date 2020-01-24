@@ -3,6 +3,10 @@ package befaster.solutions.CHK;
 import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
+
+    static int[] PRICES = {};
+    static int[] OFFERS = {};
+
     public Integer checkout(String skus) {
 
         int[] numberOfItems = new int[6];
@@ -45,6 +49,7 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
+
 
 
 
