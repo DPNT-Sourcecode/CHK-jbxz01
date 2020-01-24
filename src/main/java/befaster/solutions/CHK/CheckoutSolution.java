@@ -30,7 +30,7 @@ public class CheckoutSolution {
         numberOfItems['F' - 65] = numberOfItems['F' - 65] - numberOfItems['F' - 65] / 2;
 
         //N offer
-        numberOfItems['M' - 65] = numberOfItems['M' - 65] - numberOfItems['R' - 65] / 3;
+        numberOfItems['M' - 65] = numberOfItems['M' - 65] - numberOfItems['N' - 65] / 3;
         if (numberOfItems['M' - 65] < 0 )
             numberOfItems['M' - 65] = 0;
 
@@ -66,43 +66,33 @@ public class CheckoutSolution {
                     totalCheckout += (numberOfItems[i] / 10) * 80;
                     remainingAItems = numberOfItems[i] % 10;
                     //Than the 3 items offer
-                    totalCheckout += (remainingAItems / 3 ) * 130;
-                    totalCheckout += (remainingAItems % 3 ) * 50;
+                    totalCheckout += (remainingAItems / 5 ) * 45;
+                    totalCheckout += (remainingAItems % 5 ) * 10;
                     break
-                case 'A':
+                case 'P':
+                    totalCheckout += (numberOfItems[i] / 5) * 200;
+                    totalCheckout += (numberOfItems[i] % 5) * 50;
                     break
-                case 'A':
+                case 'Q':
+                    totalCheckout += (numberOfItems[i] / 3) * 80;
+                    totalCheckout += (numberOfItems[i] % 3) * 30;
+                    break
+                case 'V':
+                    totalCheckout += (numberOfItems[i] / 3) * 130;
+                    remainingAItems = numberOfItems[i] % 3;
+                    //Than the 3 items offer
+                    totalCheckout += (remainingAItems / 2 ) * 90;
+                    totalCheckout += (remainingAItems % 2 ) * 50;
                     break
                 default:
                     totalCheckout += numberOfItems[i] * PRICES[i];
             }
         }
 
-
-        //Adding the value of items A
-        //First get the 5 items offer
-        totalCheckout += (numberOfItems[0] / 5) * 200;
-        int remainingAItems = numberOfItems[0] % 5;
-        //Than the 3 items offer
-        totalCheckout += (remainingAItems / 3 ) * 130;
-        totalCheckout += (remainingAItems % 3 ) * 50;
-        //Adding the value of items B
-        totalCheckout += (numberOfItems[1] / 2) * 45;
-        totalCheckout += (numberOfItems[1] % 2) * 30;
-        //Adding the value of items C
-        totalCheckout += numberOfItems[2] * 20;
-        //Adding the value of items D
-        totalCheckout += numberOfItems[3] * 15;
-        //Adding the value of items E
-        totalCheckout += numberOfItems[4] * 40;
-
-        //Adding the value of items F
-        totalCheckout += (numberOfItems[5] / 3) * 20; //80 = 2 * F, so we charge 3 items for the price of 2
-        totalCheckout += (numberOfItems[5] % 3) * 10;
-
         return totalCheckout;
     }
 }
+
 
 
 
