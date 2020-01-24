@@ -8,12 +8,14 @@ public class CheckoutSolution {
 
     public Integer checkout(String skus) {
 
-        int[] numberOfItems = new int[6];
+        int[] numberOfItems = new int[26];
+
+        System.out.println(PRICES.length);
 
         for (int i = 0; i < skus.length(); i++)
         {
             Character character = skus.charAt(i);
-            if (character < 65 || character > 70 )
+            if (character < 65 || character > 90 )
                 return -1;
             numberOfItems[character - 65]++;
         }
@@ -48,8 +50,3 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
-
-
-
-
-
