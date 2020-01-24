@@ -24,7 +24,7 @@ public class CheckoutSolution {
         //Adding the value of items A
         //First get the 5 items offer
         totalCheckout += (numberOfItems[0] / 5) * 200;
-        remainingAItems = numberOfItems[0] % 5;
+        int remainingAItems = numberOfItems[0] % 5;
         //Than the 3 items offer
         totalCheckout += (remainingAItems / 3 ) * 130;
         totalCheckout += (remainingAItems % 3 ) * 50;
@@ -41,3 +41,4 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
+
