@@ -17,6 +17,7 @@ public class CheckoutSolutionTest {
 
     @Test
     public void computeCheckout() {
-        assertThat(sum.compute(1, 1), equalTo(2));
+        assertThat(checkout.checkout("AABABABDC"), equalTo(290));
     }
 }
+
