@@ -10,8 +10,6 @@ public class CheckoutSolution {
 
         int[] numberOfItems = new int[26];
 
-        System.out.println(PRICES.length);
-
         for (int i = 0; i < skus.length(); i++)
         {
             Character character = skus.charAt(i);
@@ -48,7 +46,7 @@ public class CheckoutSolution {
 
         for (int i = 0; i < 26; i++)
         {
-            char c = i + 65;
+            char c = (char)(i + 65);
             switch (c)
             {
                 case 'A':
@@ -92,6 +90,7 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
+
 
 
 
