@@ -25,7 +25,7 @@ public class CheckoutSolution {
             numberOfItems['B' - 65] = 0;
 
         //F offer
-        numberOfItems['F' - 65] = numberOfItems['F' - 65] - numberOfItems['F' - 65] / 2;
+        numberOfItems['F' - 65] = numberOfItems['F' - 65] - numberOfItems['F' - 65] / 3;
 
         //N offer
         numberOfItems['M' - 65] = numberOfItems['M' - 65] - numberOfItems['N' - 65] / 3;
@@ -38,7 +38,7 @@ public class CheckoutSolution {
             numberOfItems['Q' - 65] = 0;
 
         //U offer
-        numberOfItems['U' - 65] = numberOfItems['U' - 65] - numberOfItems['U' - 65] / 3;
+        numberOfItems['U' - 65] = numberOfItems['U' - 65] - numberOfItems['U' - 65] / 4;
 
 
         int totalCheckout = 0;
@@ -90,6 +90,7 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
+
 
 
 
