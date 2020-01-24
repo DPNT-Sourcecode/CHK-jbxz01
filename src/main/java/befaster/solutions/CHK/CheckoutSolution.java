@@ -67,6 +67,10 @@ public class CheckoutSolution {
                     totalCheckout += (remainingAItems / 5 ) * 45;
                     totalCheckout += (remainingAItems % 5 ) * 10;
                     break;
+                case 'K':
+                    totalCheckout += (numberOfItems[i] / 2) * 150;
+                    totalCheckout += (numberOfItems[i] % 2) * 80;
+                    break;
                 case 'P':
                     totalCheckout += (numberOfItems[i] / 5) * 200;
                     totalCheckout += (numberOfItems[i] % 5) * 50;
@@ -90,6 +94,7 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
+
 
 
 
