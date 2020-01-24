@@ -15,10 +15,19 @@ public class CheckoutSolution {
             numberOfItems[character - 65]++;
         }
 
+        //Process the new offer, for 2 of E you get 1 B free
+        numberOfItems[1] = numberOfItems[1] - numberOfItems[4] / 2;
+        if (numberOfItems[1] < 0 )
+            numberOfItems[1] = 0;
+
         int totalCheckout = 0;
         //Adding the value of items A
-        totalCheckout += (numberOfItems[0] / 3) * 130;
-        totalCheckout += (numberOfItems[0] % 3) * 50;
+        //First get the 5 items offer
+        totalCheckout += (numberOfItems[0] / 5) * 200;
+        remainingAItems = numberOfItems[0] % 5;
+        //Than the 3 items offer
+        totalCheckout += (remainingAItems / 3 ) * 130;
+        totalCheckout += (remainingAItems % 3 ) * 50;
         //Adding the value of items B
         totalCheckout += (numberOfItems[1] / 2) * 45;
         totalCheckout += (numberOfItems[1] % 2) * 30;
@@ -26,12 +35,9 @@ public class CheckoutSolution {
         totalCheckout += numberOfItems[2] * 20;
         //Adding the value of items D
         totalCheckout += numberOfItems[3] * 15;
+        //Adding the valoe of items E
+        totalCheckout += numberOfItems[4] * 40;
 
         return totalCheckout;
     }
 }
-
-
-
-
-
