@@ -50,7 +50,14 @@ public class CheckoutSolution {
         int totalCheckout = 0;
         int remainingAItems;
 
-        for (int i = 0; i < 26; i++)
+
+        //The logic for the group of items of 45
+        int groupTotal = numberOfItems['X' - 65] + numberOfItems['Y' - 65] + numberOfItems['Z' - 65];
+        totalCheckout += (groupTotal / 3) * 45; //First we take care of the offers.
+        int notInOfferItems = groupTotal % 3;
+
+        //For X Y and Z we have a separate logic
+        for (int i = 0; i < 23; i++)
         {
             char c = (char)(i + 65);
             switch (c)
@@ -100,5 +107,6 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 }
+
 
 
